@@ -91,12 +91,16 @@ const scrollTo = (id: string) => {
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
+    <div className="min-h-screen bg-background text-foreground font-sans relative">
+      {/* Faded background logo watermark */}
+      <div className="fixed inset-0 z-0 pointer-events-none flex items-center justify-center">
+        <img src="/logo-icon.svg" alt="" className="w-[600px] h-[600px] opacity-[0.03]" />
+      </div>
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border relative">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <button onClick={() => scrollTo("hero")} className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Simbaco logo" className="h-10 w-10" />
+            <img src="/logo-icon.svg" alt="Simbaco logo" className="h-10 w-10" />
             <span className="text-lg font-semibold tracking-widest text-foreground">SIMBACO</span>
           </button>
           <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
@@ -109,8 +113,11 @@ const Index = () => {
       </header>
 
       {/* Hero */}
-      <section id="hero" className="py-24 md:py-36 px-4">
-        <div className="max-w-3xl mx-auto text-center">
+      <section id="hero" className="py-24 md:py-36 px-4 relative overflow-hidden">
+        <div className="absolute right-[-80px] top-1/2 -translate-y-1/2 opacity-[0.04] hidden md:block">
+          <img src="/logo-icon.svg" alt="" className="w-[400px] h-[400px]" />
+        </div>
+        <div className="max-w-3xl mx-auto text-center relative z-10">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground leading-tight">
             IT Management &<br />Sourcing Consultancy
           </h1>
@@ -213,7 +220,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <img src="/logo.svg" alt="Simbaco" className="h-8 w-8" />
+              <img src="/logo-icon.svg" alt="Simbaco" className="h-8 w-8" />
               <span className="font-semibold tracking-widest text-foreground">SIMBACO AS</span>
             </div>
             <p className="text-sm text-muted-foreground">Org.nr 930 277 851</p>
