@@ -101,7 +101,6 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <button onClick={() => scrollTo("hero")} className="flex items-center gap-3">
             <img src="/logo-icon.svg" alt="Simbaco logo" className="h-10 w-10" />
-            <span className="text-lg font-semibold tracking-widest text-foreground">SIMBACO</span>
           </button>
           <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
             <button onClick={() => scrollTo("about")} className="hover:text-primary transition-colors">About</button>
