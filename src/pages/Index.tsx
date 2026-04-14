@@ -220,7 +220,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <img src="/logo.svg" alt="Simbaco" className="h-8 w-8" />
+              <img src="/logo-icon.svg" alt="Simbaco" className="h-8 w-8" />
               <span className="font-semibold tracking-widest text-foreground">SIMBACO AS</span>
             </div>
             <p className="text-sm text-muted-foreground">Org.nr 930 277 851</p>
