@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #f4f4f4;
+        }
+        #joke { 
+            margin-top: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        button { 
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Random Joke Generator</h1>
+        <button id="jokeButton">Get a Joke!</button>
+        <div id="joke"></div>
+    </div>
+    <script>
+        async function fetchJoke() {
+            const response = await fetch('https://v2.jokeapi.dev/joke/Any');
+            const data = await response.json();
+            const jokeElement = document.getElementById('joke');
+            if (data.type === 'single') {
+                jokeElement.innerText = data.joke;
+            } else {
+                jokeElement.innerText = `${data.setup} \n ${data.delivery}`;
+            }
+        }
+        document.getElementById('jokeButton').addEventListener('click', fetchJoke);
+    </script>
+</body>
+</html>
