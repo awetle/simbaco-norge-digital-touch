@@ -113,8 +113,11 @@ const Index = () => {
       </header>
 
       {/* Hero */}
-      <section id="hero" className="py-24 md:py-36 px-4">
-        <div className="max-w-3xl mx-auto text-center">
+      <section id="hero" className="py-24 md:py-36 px-4 relative overflow-hidden">
+        <div className="absolute right-[-80px] top-1/2 -translate-y-1/2 opacity-[0.04] hidden md:block">
+          <img src="/logo-icon.svg" alt="" className="w-[400px] h-[400px]" />
+        </div>
+        <div className="max-w-3xl mx-auto text-center relative z-10">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground leading-tight">
             IT Management &<br />Sourcing Consultancy
           </h1>
