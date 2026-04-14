@@ -91,12 +91,16 @@ const scrollTo = (id: string) => {
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
+    <div className="min-h-screen bg-background text-foreground font-sans relative">
+      {/* Faded background logo watermark */}
+      <div className="fixed inset-0 z-0 pointer-events-none flex items-center justify-center">
+        <img src="/logo-icon.svg" alt="" className="w-[600px] h-[600px] opacity-[0.03]" />
+      </div>
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
+      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border relative">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <button onClick={() => scrollTo("hero")} className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Simbaco logo" className="h-10 w-10" />
+            <img src="/logo-icon.svg" alt="Simbaco logo" className="h-10 w-10" />
             <span className="text-lg font-semibold tracking-widest text-foreground">SIMBACO</span>
           </button>
           <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
