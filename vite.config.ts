@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // ✅ KRITISK for GitHub Pages (repo-navn må stemme eksakt)
-  base: "/simbaco-norge-digital-touch/",
+  base: "/simbaco/",
 
   server: {
     host: "::",
