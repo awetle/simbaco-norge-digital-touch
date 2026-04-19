@@ -96,7 +96,7 @@ const Index = () => {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <button onClick={() => scrollTo("hero")} className="flex items-center gap-3">
-            <img src="/logo-icon.png" alt="Simbaco logo" className="h-10 w-10" />
+            <img src="/public/logo-icon.png" alt="Simbaco logo" className="h-10 w-10" />
             <span className="text-lg font-semibold tracking-widest text-foreground">SIMBACO</span>
           </button>
           <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
@@ -130,7 +130,7 @@ const Index = () => {
           <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-8">About</h2>
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <img
-              src="/profile.jpg"
+              src="/public/profile.jpg"
               alt="Asbjørn Wetlesen"
               className="w-40 h-40 md:w-48 md:h-48 rounded-lg object-cover object-top border-2 border-primary/20 flex-shrink-0"
             />
@@ -213,7 +213,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <img src="/logo-icon.png" alt="Simbaco" className="h-8 w-8" />
+              <img src="/public/logo-icon.png" alt="Simbaco" className="h-8 w-8" />
               <span className="font-semibold tracking-widest text-foreground">SIMBACO AS</span>
             </div>
             <p className="text-sm text-muted-foreground">Org.nr 930 277 851</p>
